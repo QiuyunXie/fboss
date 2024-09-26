@@ -567,7 +567,7 @@ void ControlLogic::updateControl(std::shared_ptr<SensorData> pS) {
     pBsp_->getSensorData(pSensor_);
   }
 
-  // STEP 1: Check presence/rpm of fans
+  // STEP 2: Check presence/rpm of fans
   XLOG(INFO) << "Processing Fans ...";
   fanStatuses_.withWLock([&](auto& fanStatuses) {
     // Update fan status with new rpm and timestamp.
